@@ -1,0 +1,35 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.container{
+    display: grid;
+    justify-content: center;
+}
+img{
+    width: auto;
+    max-height: 350px;
+}
+[class*="row-"]{
+    margin-top: 5px;
+    padding-top: 5px;
+    justify-self: center;
+}
+[class*="col-"]{
+    text-align: center;
+    margin-top: 20px;
+}
+input{
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+    
+    .container{
+    }
+    
+    .col-3 {
+        width: 25%;
+        align-self: center;
+    }
+    
+}
