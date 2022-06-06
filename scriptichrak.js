@@ -10,44 +10,58 @@
             counterInput.value = counter;
             score.value=counter;
         });*/
-        
+        function update(){
+            counterInput.value = counter;
+            //score.value=counter;
+            document.getElementById("costautoclick").innerHTML  = "Price= " + ((autoClick +1)*20) +  "pts";
+            document.getElementById("persecondcookies").innerHTML  = (((autoClick))) + " click/second";
+            document.getElementById("amountmultiplier2").innerHTML  = " x" + (multiplier+1);
+            document.getElementById("costmultiplier").innerHTML  = "Price= " + ((multiplier+2)*10)  + " pts";
+            document.getElementById("currentmultiplier").innerHTML  = "your current multiplier is x" + (multiplier);
+        }
+
         imageBtn.onclick=function(){clickfunction();};
         function clickfunction(){
             counter = counter + 1;
-            counterInput.value = counter;
-            localStorage.setItem("counter",counter);
-            score.value= localStorage.getItem("counter");
-            score.value= parseInt(score.value);
+            
+            //localStorage.setItem("counter",counter);
+            //score.value= localStorage.getItem("counter");
+            //score.value= parseInt(score.value);
+            update();
             
         };
         
-        
+           
         
         //console.log(score.value);
 
-        //Multiplyer:
-    
-    let Multiplyer= document.getElementById("btn-1");
-    Multiplyer.onclick= function() {multiply();};
-        function multiply() {
-            localStorage.setItem("score",score.value);
-            score.value= localStorage.getItem("score");
-            score.value= score.value *4;
-            //localStorage.setItem("score*",score.value);
-            //var scoore = localStorage.getItem('score*');
-                
-        }
+       
+
+
         //Auto-clicker:
+    var autoClick = 0;
     
+        function timer() {
+            counter = counter + autoClick;
+        update();}
+    setInterval(timer, 1000);        
     let autoclicker= document.getElementById("btn-3");
-    autoclicker.onclick= function() {increase();};
-        function increase() {
-            localStorage.setItem("score",score);
-            score.value= Number(score.value) + Number(5);
-                
-        }
-      
-        //var interval = setInterval(increase, 1000);
+    autoclicker.onclick= function() {increase();}
+    function increase() {
+        //setInterval(autocliker, 1000);
+           // for (var i = 0; i < 10; i++) {
+           //     score.value= autoClick += 1;}
+                //if(autoClick==5){
+                //    clearInterval(interval);}
+            if (counter >= ((autoClick + 1) * 20)) {
+                counter = counter - ((autoClick + 1) * 20);
+                autoClick = autoClick + 1;
+                update();
+            }
+        
+    }
+    
+    //var interval = setInterval(increase, 1000);
         
 })();
 
@@ -119,6 +133,20 @@ var number = 0;
         function increase() {
             localStorage.setItem("score",score);
             score.value= Number(score.value) + Number(5);
+                
+        }
+*/
+
+/*
+ //Multiplyer: draft1
+    let MultiplyerBTN= document.getElementById("btn-1");
+    MultiplyerBTN.onclick= function() {multiply();};
+        function multiply() {
+            localStorage.setItem("score",score.value);
+            score.value= localStorage.getItem("score");
+            score.value= score.value *4;
+            //localStorage.setItem("score*",score.value);
+            //var scoore = localStorage.getItem('score*');
                 
         }
 */
