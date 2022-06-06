@@ -9,8 +9,8 @@
         function update(){
             counterInput.value = counter; 
             document.getElementById("costautoclick").innerHTML  = "Price= " + ((autoClick +1)*20) +  "pts";
-            document.getElementById("persecondcookies").innerHTML  = (((autoClick))) + " click/second";
-            document.getElementById("amountmultiplier2").innerHTML  = " x" + (multiplier+2);
+            document.getElementById("persecondcookies").innerHTML  = (autoClick + 1) + " point(s)/second";
+            document.getElementById("amountmultiplier2").innerHTML  = " your clicks" + " x" + (multiplier+2);
             document.getElementById("costmultiplier").innerHTML  = "Price= " + ((multiplier+2)*10)  + " pts";
             document.getElementById("currentmultiplier").innerHTML  = "your current multiplier is x" + (multiplier);
         }
