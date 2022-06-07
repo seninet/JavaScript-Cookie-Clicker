@@ -6,38 +6,12 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="container">
-    <div class="row-0">  <! -- instructions--> 
-        <div class="instrbox">
-            <h3>Instructions:</h3>
-            <p class="instructions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, fuga. Ipsam voluptatibus, tenetur, doloremque itaque earum aspernatur molestiae numquam similique incidunt fuga quaerat magni? Obcaecati similique nemo ullam cumque mollitia.</p>
-        </div>
-    </div>
-    <div class="row-1"> <! --image cookie -->
-       <button type="button" id="imagebtn"data-min="0"><img src="cookie1.png"></button>
-    </div>
-    <div class="row-2"> <! -- Counter & score box-->
-        <div class="col-s-12 col-3">
-            <h3 class="score">Score:</h3>
-            <input type="text" name="scorebox" id="scorebox" value="00" min="0" />
-        </div>
-        <div class="col-s-12 col-3">
-            <h3>Counter:</h3>
-            <input type="text" name="counter" id="counter" value="00" min="0" />
-        </div>
-    </div>
-    <div class="row-3"> <! --3 buttons --> 
-        <div class="col-s-12 col-3">
-            <button type="button" id="btn-1"data-min="10">Multiplyer x4 </br> Price=10pts</button>
-        </div>
-        <div class="col-s-12 col-3">
-            <button type="button" id="btn-2"data-min="10">Bonus </br> Timer</br>Price=10pts</button>
-        </div>
-        <div class="col-s-12 col-3">
-            <button type="button" id="btn-3" data-min="10">Auto-clicker </br>50pts/second</br>Price=10pts</button>
-        </div>
-    </div>
-</div>
+    <div id="display"></div>
+    <input id="click" type="button" value="click">
+    <input id="multiply" type="button" value="">
+    <input id="autoclick" type="button" value="">
+    <input id="bonus" type="button" value="">
 
+<script src="./script.js"></script>
 </body>
 </html>
