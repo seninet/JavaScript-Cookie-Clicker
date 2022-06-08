@@ -3,18 +3,20 @@
         let imageBtn = document.getElementById("imagebtn");
         let counterInput = document.getElementById("counter");
         let score=document.getElementById("scorebox");
+        let conteur=document.getElementById("conteur");
         let counter = 0;
         var bonus = document.getElementById("btn-2");
+        //var bonus200=1;
     
         // Update function updates the HTML text in buttons, you need to call this function in other functions (buttons...):
         function update(){
+            //counter = counter + multiplier*bonus200;
             counterInput.value = counter; 
             document.getElementById("costautoclick").innerHTML  = "Price= " + ((autoClick +1)*20) +  "pts";
             
             document.getElementById("persecondcookies").innerHTML  = (autoClick + 1) + " point(s)/second";
             document.getElementById("amountmultiplier").innerHTML  = " your clicks" + " x" + (multiplier+2);
             document.getElementById("costmultiplier").innerHTML  = "Price= " + ((multiplier+2)*10)  + " pts";
-            document.getElementById("currentmultiplier").innerHTML  = "your current multiplier is x" + (multiplier);
             //document.getElementById("bonuscost").innerHTML  = "Price= " + bonusCost  + " pts";
            // document.getElementById("timer").innerHTML  = bonusTime + " seconds";
         }
@@ -31,7 +33,7 @@
         //Add Hover effect on cookie:
         imageBtn.onmouseover = function() {mouseOver()};
             function mouseOver() {
-                imageBtn.style.transform = "scale(1.5)";
+                imageBtn.style.transform = "scale(1.2)";
             }
         imageBtn.onmouseout = function() {mouseOut()};
         function mouseOut() {
@@ -72,6 +74,7 @@
             if(counter >= ((multiplier+2)*10)){
                 counter = counter - ((multiplier+2)*10);
                 multiplier = multiplier+2;
+                document.getElementById("currentmultiplier").innerHTML  = "your current multiplier is x" + (multiplier);
                 btn1colorchange();
                 }
             else {
@@ -185,8 +188,7 @@
             counter -= bonusCost;  
             bonusOn = true;  
             //counter *= 2;  
-            bonus.disabled = true;  
-            displayScore();  
+            bonus.disabled = true;   
             displayBonusTime();
         }
         function disableBonus() {
@@ -197,6 +199,8 @@
             buttonsEnabler();
           }
         function bonusF() {  
+            
+            bonus200=2;
             if (bonusOn) {    
                 --bonusTime;    
                 displayBonusTime();    
@@ -205,7 +209,7 @@
                 }  
             }
         }
-        //displayBonus();
+        displayBonus();
         //bonus.disabled = true;
         bonus.addEventListener('click', enableBonus);
         bonusInterval = window.setInterval(bonusF, 1000);
