@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookie Clicker</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row-0">
+            <! -- instructions-->
+            <div class="instrbox">
+                <h3>Instructions:</h3>
+                <p class="instructions">
+                    Everytime you click on the cookie you will get 1 point. I you want to increase your score faster you can use some of your points (displayed in score box) to buy improvements (multiplier, bonus or autoclicker).
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Multiplier:</b> will multiply each click by the number displayed in the button. The first time you buy it will be multiplied by 3. Then the price will increase and so will the multiplier.
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Auto-clicker: </b>will allow you to increase your score without you clicking. It starts at 1clic/second, then 2 ...
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Bonus: </b>will allow you to increase your score by 200% everytime you click on the cookie during 30seconds.
+                </p>
+            </div>
+        </div>
+        <div class="row-11">
+            <! --Update -->
+            <div>
+                <p id="currentpersecondcookies"></p>
+            </div>
+        </div>
+        <div class="row-1">
+            <! --image cookie -->
+            <button type="button" id="imagebtn" data-min="0">
+          <img id="image" src="/JavaScript-Cookie-Clicker/images/cookie1.png" />
+        </button>
+        </div>
+        <div class="row-2">
+            <! -- Score box-->
+            <div class="col-s-12 col-3">
+                <h3 class="score">Score:</h3>
+                <input type="text" name="scorebox" id="counter" value="0" min="0" />
+            </div>
+        </div>
+        <div class="row-3">
+            <! --3 buttons -->
+            <h3>Buy improvements:</h3>
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-1" data-min="10">
+            <span class="badge">Multiplier</span>
+            <span id="amountmultiplier"> your clicks x3</span>
+            <p id="costmultiplier">Price= 30 pts</p>
+            <p id="currentmultiplier">your current multiplier is x1</p>
+          </button>
+            </div>
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-2" data-min="10">
+            <span class="badge">Bonus</span>
+            <p>Timer</p>
+            <p>Price=10pts</p>
+          </button>
+            </div>
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-3" data-min="10">
+            <span class="badge">Auto-clicker</span>
+            <p id="persecondcookies">1 point(s)/second</p>
+            <p id="costautoclick">Price= 20pts</p>
+          </button>
+            </div>
+        </div>
+    </div>
+    <script src="./scriptichrak.js"></script>
+</body>
+
+</html>
