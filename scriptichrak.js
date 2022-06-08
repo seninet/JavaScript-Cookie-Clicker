@@ -4,6 +4,7 @@
         let counterInput = document.getElementById("counter");
         let score=document.getElementById("scorebox");
         let counter = 0;
+        var bonus = document.getElementById("btn-2");
     
         // Update function updates the HTML text in buttons, you need to call this function in other functions (buttons...):
         function update(){
@@ -14,6 +15,8 @@
             document.getElementById("amountmultiplier").innerHTML  = " your clicks" + " x" + (multiplier+2);
             document.getElementById("costmultiplier").innerHTML  = "Price= " + ((multiplier+2)*10)  + " pts";
             document.getElementById("currentmultiplier").innerHTML  = "your current multiplier is x" + (multiplier);
+            //document.getElementById("bonuscost").innerHTML  = "Price= " + bonusCost  + " pts";
+           // document.getElementById("timer").innerHTML  = bonusTime + " seconds";
         }
 
         // Creates the click function on the cookie image:
@@ -22,6 +25,8 @@
             counter = counter + 1;  
             update();
             toaddmultipliervaluetoscore();  
+            //addscorebonus();
+            
         };
         //Add Hover effect on cookie:
         imageBtn.onmouseover = function() {mouseOver()};
@@ -152,7 +157,59 @@
             document.getElementById("myAudio").pause();
         document.getElementById("audioStatus").innerHTML="Audio Paused";	
         }
-       
+      
+        //Bonus timer:
+
+        var bonusCost = 10;
+        var bonusOn = false;
+        var bonusTime=30;
+        var scoree=0;
+        function displayBonus() {  
+            document.getElementById("bonuscost").innerHTML  = "Price= " + bonusCost  + " pts";
+        }
+        function displayBonusTime() {  
+            document.getElementById("timer").innerHTML  = bonusTime + " seconds"; 
+        }
+
+        function bonusEnabler() {  
+            if (!bonusOn && scoree >= bonusCost) {    
+                bonus.disabled = false;  
+            } 
+            else {  bonus.disabled = true;  
+            }
+        }
+        function buttonsEnabler() {
+            bonusEnabler();
+          }
+        function enableBonus() {  
+            counter -= bonusCost;  
+            bonusOn = true;  
+            //counter *= 2;  
+            bonus.disabled = true;  
+            displayScore();  
+            displayBonusTime();
+        }
+        function disableBonus() {
+            bonusOn = false;
+            bonusTime = 30;
+            //imageBtn = multiplier;
+            displayBonus();
+            buttonsEnabler();
+          }
+        function bonusF() {  
+            if (bonusOn) {    
+                --bonusTime;    
+                displayBonusTime();    
+                if (bonusTime === 0) {      
+                    disableBonus();    
+                }  
+            }
+        }
+        //displayBonus();
+        //bonus.disabled = true;
+        bonus.addEventListener('click', enableBonus);
+        bonusInterval = window.setInterval(bonusF, 1000);
+
 })();
 
 /*
@@ -160,5 +217,24 @@
         function mouseOver() {
             document.getElementById("image").style.height = "220px";
             //document.getElementById("image").style.width = "auto";
-        } 
-*/
+        } */
+
+ /* bonus.onclick= function() {functionbonus();};
+            
+        function functionbonus(){
+            if(scoree >= bonusCost){
+
+                counter = counter - bonusCost;
+                //multiplier = multiplier+2;
+                //counter = counter *2;
+                btn2colorchange();
+                }
+            else {
+                alert("You don't have enough points to buy this improvement!");
+            }        
+            update();
+        }
+        function addscorebonus(){
+            counter = counter*2;
+            
+        }*/
