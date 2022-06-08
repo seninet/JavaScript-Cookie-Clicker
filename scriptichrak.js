@@ -138,6 +138,20 @@
                 document.getElementById("btn-2").style.backgroundColor= "#FFCC00";
             }
         }
+
+        //click sound when we click on the buttons
+        const audio = new Audio();
+        audio.src = "click.mp3";
+        // audio
+        function playMyAudio(){
+            document.getElementById("myAudio").play();
+        document.getElementById("audioStatus").innerHTML="Audio is Playing";	 
+        
+        }
+        function pauseMyAudio(){
+            document.getElementById("myAudio").pause();
+        document.getElementById("audioStatus").innerHTML="Audio Paused";	
+        }
        
 })();
 

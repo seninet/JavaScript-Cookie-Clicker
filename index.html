@@ -10,6 +10,12 @@
 <body>
     <div class="container">
         <div class="row-0">
+            <!-- audio button -->
+        <audio src="audio.mp3" id="myAudio"></audio>
+        <button onClick="playMyAudio()">Play Audio</button>
+        <button onClick="pauseMyAudio()">Pause Audio</button>
+        <p id="audioStatus">Click The Play Button</p> 
+
             <!-- instructions-->
             <div class="instrbox">
                 <h3>Instructions:</h3>
@@ -50,7 +56,7 @@
             <!--3 buttons -->
             <h3>Buy improvements:</h3>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-1" data-min="10">
+                <button type="button" id="btn-1" onclick="audio.play();buymultiplier()" data-min="10">
             <span class="badge">Multiplier</span>
             <span id="amountmultiplier"> your clicks x3</span>
             <p id="costmultiplier">Price= 30 pts</p>
@@ -58,14 +64,14 @@
           </button>
             </div>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-2" data-min="10">
+                <button type="button" id="btn-2" onclick="audio.play();buymultiplier()" data-min="10">
             <span class="badge">Bonus</span>
             <p>Timer</p>
             <p>Price=10pts</p>
           </button>
             </div>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-3" data-min="10">
+                <button type="button" id="btn-3" onclick="audio.play();buymultiplier()" data-min="10">
             <span class="badge">Auto-clicker</span>
             <p id="persecondcookies">1 point(s)/second</p>
             <p id="costautoclick">Price= 20pts</p>
