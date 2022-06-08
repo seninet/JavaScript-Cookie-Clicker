@@ -8,7 +8,7 @@ To improved our:-
 - git conflict resolve skills
 
 ### Mission
-To create a **cookie clicker** as a team by following the linked [instruactions](https://github.com/seninet/Swartz-6/blob/main/2.The-Hill/1.Javascript/cookieClicker.md)
+To create a **cookie clicker** as a team by following the linked [Instructions](https://github.com/seninet/Swartz-6/blob/main/2.The-Hill/1.Javascript/cookieClicker.md)
 
 
 ##### Steps we Followed
