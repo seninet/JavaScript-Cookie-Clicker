@@ -15,7 +15,6 @@
     border-radius: 15px;
     color: #804000;
     padding: 10px;
-    margin-bottom: 10px;
 }
 h3{
     text-align: center;
@@ -79,16 +78,18 @@ input{
     padding-top: 5px;
     position: relative;
 }
-[id*="btn-"] #costautoclick, [id*="btn-"] #bonuscost , [id*="btn-"] #costmultiplier { 
+[id*="btn-"] #costautoclick, [id*="btn-"] #bonuscost , [id*="btn-"] #costmultiplier { /*https://www.w3schools.com/howto/howto_css_notification_button.asp*/
     position: absolute;
-    top: -10px;
+    top: -20px;
     right: -30px;
-    padding: 5px 10px;
+    padding: 0px 10px;
     border-radius: 50px;
     background: #deae7e;
     border: 2px solid #804000;
     color: #804000;
+    display: inline-flex;
 }
+
 /*[id*="btn-"]:hover{
     border: 2px solid #ffcc00;
     background-color: #ffcc00;
@@ -101,7 +102,6 @@ input{
 
 /*Responsive:*/
 @media only screen and (min-width: 800px) {
-    
     .container{
         display: grid;
         justify-content: center;
@@ -154,66 +154,3 @@ input{
         margin-bottom: 20px;
     }
 }
-/*MODAL*/           
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 50vh; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(238, 15, 15, 0.324); /* Fallback color */
-    background-color: rgba(83, 6, 6, 0.4); /* Black w/ opacity */
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #804000;
-    color: white;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 20px;
-    width: 80%;
-    font-size: 2em;
-  }
-
-  /* The Instruction Button */
-  .instructionz {
-    color: white;
-    background: #d6893f;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 10px;
-  }
-  
-  .instructionz:hover, .instructionz:focus {
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  
-  /* The Play Button */
-  .play {
-    color: white;
-    background: #d6893f;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 10px;
-  }
-  
-  .play:hover, .play:focus {
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-  }
