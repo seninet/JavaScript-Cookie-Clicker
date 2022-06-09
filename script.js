@@ -120,7 +120,7 @@ play.onclick = function() {
                 document.getElementById("btn-3").style.backgroundColor= "#FFCC00";
             }
         }
-
+//function for colorchange
         function btn1colorchange(){      
                 
             if(((multiplier+2)*10)<=30){
