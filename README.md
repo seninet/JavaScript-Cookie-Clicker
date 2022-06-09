@@ -32,10 +32,18 @@ To create a **cookie clicker** as a team by following the linked [Instructions](
 
 #### Team Memebers:
 
-Ichrak[](https://github.com/AIchrak)
-Theresa[](https://github.com/TT4927)
-Bhama[](https://github.com/BhamaGuruswami)
-Senait[](https://github.com/seninet)
+- Ichrak[](https://github.com/AIchrak)
+- Theresa[](https://github.com/TT4927)
+- Bhama[](https://github.com/BhamaGuruswami)
+- Senait[](https://github.com/seninet)
+
+
+#### License
+
+This project is under license from MIT. For more details, see the [License](
+https://github.com/seninet/JavaScript-Cookie-Clicker/blob/main/LICENSE)
+
+
   
 
 
