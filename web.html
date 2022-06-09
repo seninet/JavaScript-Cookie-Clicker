@@ -5,7 +5,7 @@
     <title>Cookie Clicker</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style2.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -20,7 +20,9 @@
         </div>
         <div class="row-1">
             <div class="row-11">
-                <img src="/images/CookieClicker.png" id="logo" alt="cookie clicker logo">
+
+                <img src="/JavaScript-Cookie-Clicker/images/CookieClicker.png" id="logo" alt="cookie clicker logo">
+
             </div>
 
             <!-- audio button -->
@@ -65,21 +67,28 @@
             <!--image cookie -->
             <div class="centerimage">
                 <button type="button" id="imagebtn" data-min="0">
-                    <img id="image" src="/images/cookie1.png" alt="un cookie" />
+                    <img id="image" src="/JavaScript-Cookie-Clicker/images/cookie1.png" alt="un cookie" />
                 </button>
             </div>
             <!-- Score box-->
-            <div class="col-s-12 col-3">
-                <h3 class="score">Score:</h3>
-                <input type="text" name="scorebox" id="counter" value="0" min="0" />
-            </div>
+
+            <div class="popup">
+                <span class="popuptext" id="myPopup">You don't have enough points to buy this improvement! !</span
+          >
         </div>
+        <!-- Score box-->
+        <div class="col-s-12 col-3">
+          <h3 class="score">Score:</h3>
+          <input type="text" name="scorebox" id="counter" value="0" min="0" />
+        </div>
+
 
 
         <div class="colonne-3">
 
 
             <!--3 buttons -->
+
 
             <h3>Buy improvements:</h3>
             <div class="col-s-12 col-3">
@@ -104,8 +113,10 @@
                 </button>
             </div>
         </div>
+      </div>
     </div>
     <script src="./script.js"></script>
+
 </body>
 
 </html>
