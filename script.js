@@ -160,18 +160,6 @@ function gameFunction() {
         }
     }
 
-    //click sound when we click on the buttons
-    const audio = new Audio();
-    audio.src = "click.mp3";
-    // audio
-    function playMyAudio() {
-        document.getElementById("myAudio").play();
-    }
-
-    function pauseMyAudio() {
-        document.getElementById("myAudio").pause();
-    }
-
     //Bonus timer:
 
     let bonusCost = 200;
@@ -231,3 +219,14 @@ function gameFunction() {
 }
 
 gameFunction();
+
+//click sound when we click on the buttons
+
+// audio
+function playMyAudio() {
+    document.getElementById("myAudio").play();
+}
+
+function pauseMyAudio() {
+    document.getElementById("myAudio").pause();
+}
