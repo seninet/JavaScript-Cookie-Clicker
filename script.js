@@ -19,6 +19,7 @@ var play = document.getElementsByClassName("play")[0];
 window.onload = function() {
    modal.style.display = "block";
 }
+// 
 
 play.onclick = function() {
    modal.style.display = "none";
