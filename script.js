@@ -223,10 +223,10 @@ gameFunction();
 //click sound when we click on the buttons
 
 // audio
-function playMyAudio() {
+function playAudio() {
     document.getElementById("myAudio").play();
 }
 
-function pauseMyAudio() {
+function pauseAudio() {
     document.getElementById("myAudio").pause();
 }
