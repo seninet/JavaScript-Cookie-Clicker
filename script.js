@@ -26,13 +26,13 @@ function gameFunction() {
     function update() {
         counterInput.value = counter;
         document.getElementById("costautoclick").innerHTML =
-            (autoClick + 1) * 20 + " pts";
+            "Cost: " + (autoClick + 1) * 150 + " pts";
         document.getElementById("persecondcookies").innerHTML =
             autoClick + 1 + " point(s)/second";
         document.getElementById("amountmultiplier").innerHTML =
             " your clicks" + " x" + (multiplier + 2);
         document.getElementById("costmultiplier").innerHTML =
-            (multiplier + 2) * 10 + " pts";
+            "Cost: " + multiplier * 100 + " pts";
     }
     // alret box function
     function alertBox() {
@@ -84,8 +84,8 @@ function gameFunction() {
     };
 
     function increase() {
-        if (counter >= (autoClick + 1) * 20) {
-            counter = counter - (autoClick + 1) * 20;
+        if (counter >= (autoClick + 1) * 150) {
+            counter = counter - (autoClick + 1) * 150;
             autoClick = autoClick + 1;
             document.getElementById("currentpersecondcookies").innerHTML =
                 "Autoclicker is on: " + autoClick + " point(s)/second";
@@ -104,8 +104,8 @@ function gameFunction() {
     };
 
     function multiply() {
-        if (counter >= (multiplier + 2) * 10) {
-            counter = counter - (multiplier + 2) * 10;
+        if (counter >= multiplier * 100) {
+            counter = counter - multiplier * 100;
             multiplier = multiplier + 2;
             document.getElementById("currentmultiplier").innerHTML =
                 "your current multiplier is x" + multiplier;
@@ -174,13 +174,14 @@ function gameFunction() {
 
     //Bonus timer:
 
-    let bonusCost = 10;
+    let bonusCost = 200;
     let bonusOn = false;
-    let bonusTime = 10;
+    let bonusTime = 30;
     let scoree = 0;
 
     function displayBonus() {
-        document.getElementById("bonuscost").innerHTML = bonusCost + " pts";
+        document.getElementById("bonuscost").innerHTML =
+            "Cost: " + bonusCost + " pts";
     }
 
     function displayBonusTime() {
@@ -202,7 +203,7 @@ function gameFunction() {
     function enableBonus() {
         counter = counterInput.value - bonusCost;
         bonusOn = true;
-        multiplier = 2 * (multiplier * 20);
+        multiplier = multiplier * 20;
         bonus.disabled = true;
         displayBonusTime();
     }
@@ -210,7 +211,7 @@ function gameFunction() {
     function disableBonus() {
         multiplier = false;
         bonusOn = false;
-        bonusTime = 10;
+        bonusTime = 30;
         buttonsEnabler();
     }
 
