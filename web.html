@@ -12,7 +12,7 @@
         <!--MODAL TT-->
         <div id="welcome" class="modal">
             <div class="modal-content">
-                <p>WELCOME TO THE COOKIE CLICKER GAME !</p>
+                <h1>WELCOME TO THE COOKIE CLICKER GAME !</h1>
                 <button id="play" class="play">PLAY</button>
             </div>
         </div>
@@ -24,8 +24,8 @@
             <!-- audio button -->
             <div class="row-12">
                 <audio src="audio.mp3" id="myAudio"></audio>
-                <button onclick="playMyAudio()">Play Audio</button>
-                <button onclick="pauseMyAudio()">Pause Audio</button>
+                <button onClick="playAudio()">PlaySoundAudio</button>
+                <button onClick="pauseAudio()">Pause Audio</button>
             </div>
         </div>
             <!-- instructions-->
@@ -60,7 +60,6 @@
                     <img id="image" src="/JavaScript-Cookie-Clicker/images/cookie1.png" alt="un cookie" />
                 </button>
             </div>
-            
             <!-- Score box-->
             <div class="col-s-12 col-3">
                 <h3 class="score">Score:</h3>
@@ -68,6 +67,7 @@
             </div>
         </div>
         
+            
         <div class="colonne-3">
 
       
@@ -75,21 +75,21 @@
 
             <h3>Buy improvements:</h3>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-1" onclick="audio.play();buymultiplier()" data-min="10">
+                <button type="button" id="btn-1" onclick="audio.play()" data-min="10">
                 <p>Multiplier</p>
                 <p id="amountmultiplier"> your clicks x3</p>
                 <p id="costmultiplier">30 pts</p>
                 </button>
             </div>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-2" onclick="audio.play();buymultiplier()" data-min="10">
+                <button type="button" id="btn-2" onclick="audio.play()" data-min="10">
                 <p>Bonus</p>
                 <p id="timer">0.30</p>
                 <p id="bonuscost">10 pts</p>
                 </button>
             </div>
             <div class="col-s-12 col-3">
-                <button type="button" id="btn-3" onclick="audio.play();buymultiplier()" data-min="10">
+                <button type="button" id="btn-3" onclick="audio.play()" data-min="10">
                 <p>Auto-clicker</p>
                 <p id="persecondcookies">1 point(s)/second</p>
                 <p id="costautoclick">20 pts</p>

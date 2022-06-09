@@ -19,6 +19,7 @@ var play = document.getElementsByClassName("play")[0];
 window.onload = function() {
    modal.style.display = "block";
 }
+// 
 
 play.onclick = function() {
    modal.style.display = "none";
@@ -139,18 +140,7 @@ play.onclick = function() {
             }
         }
 
-
-        //click sound when we click on the buttons
-        const audio = new Audio();
-        audio.src = "click.mp3";
-        // audio
-        function playMyAudio(){
-            document.getElementById("myAudio").play();
-        }
-        function pauseMyAudio(){
-            document.getElementById("myAudio").pause();	
-        }
-      
+       
         //Bonus timer:
 
         var bonusCost = 10;
@@ -203,4 +193,16 @@ play.onclick = function() {
         bonus.addEventListener('click', enableBonus);
         bonusInterval = window.setInterval(bonusF, 1000);
 
+
 })();
+        //click sound when we click on the buttons
+        const audio = new Audio();
+        audio.src = "click.mp3";
+
+         // audio
+         function playAudio(){
+            document.getElementById("myAudio").play();
+        }
+        function pauseAudio(){
+            document.getElementById("myAudio").pause();	
+        }
