@@ -129,8 +129,9 @@ input{
 
 /* BACKGROUND */
 body {
-    background-color: lightblue;
-    background-image: linear-gradient(to left,pink,orange);
+    /* background-color: lightblue;*/
+    background-image: linear-gradient(to right,pink,orange); 
+   
 }
 
   /* body {
@@ -146,7 +147,7 @@ body {
   
 
 /* floating cookies */
-#floating-cookies {
+/* #floating-cookies {
     visibility: visible;
     position: relative;
     height: 65%;
@@ -241,7 +242,7 @@ body {
         transform: translateY(-10px) rotate(30deg);
         transform: translateX(-5%) rotate(225deg);
     }
-}
+} */
 
 /*MODAL*/           
 .modal {
