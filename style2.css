@@ -216,14 +216,19 @@ input {
     margin-top: 2%;
     margin-bottom: 20px;
     padding: 20px;
-    /* border: 3px solid #804000 ; */
+    border: 3px solid #804000;
     border-radius: 50px;
-    width: 60%;
-    height: 70%;
-    font-size: 6rem;
+    width: 52%;
+    height: 60%;
+    font-size: 30px;
     position: absolute;
     z-index: -2;
-    background-image: url(https://i.gifer.com/9E93.gif);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    /*background-image: url(https://i.gifer.com/9E93.gif);*/
 }
 
 
@@ -232,7 +237,7 @@ input {
 .instructionz {
     color: white;
     background: #d6893f;
-    font-size: 20px;
+    font-size: 40px;
     border: none;
     border-radius: 10px;
     padding: 5px;
@@ -247,7 +252,7 @@ input {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
@@ -256,16 +261,17 @@ h1 {
 .play {
     color: white;
     background: #804000;
-    font-size: 24px;
-    border: 2px solid #d6893f;
+    font-size: 20px;
+    border: 2px solid #804000;
     border-radius: 30px;
     padding: 15px 40px;
     margin-top: 10px;
+    align-self: center;
 }
 
 .play:hover,
 .play:focus {
-    padding: 10px;
+    padding: 15px 45px;
     text-decoration: none;
     cursor: pointer;
 }
