@@ -1,0 +1,310 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+}
+h3{
+    text-align: center;
+    color: black;
+}
+.instructions{
+    text-align: justify;
+    font-size: 18px;
+}
+.instrbox{
+    border: 2px solid #804000;
+    border-radius: 15px;
+    max-width:  600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,253,10,0.33967090254070376) 35%, rgba(255,201,4,0.5497549361541492) 100%);
+}
+b{
+    color: #804000;  
+}
+img{
+    width: auto;
+    max-height: 200px;
+}
+#imagebtn{
+    border: none;
+    background-color: transparent;
+}
+#counter{
+    border: 2px solid #804000; 
+}
+[class*="row-"]{
+    margin-top: 5px;
+    padding-top: 5px;
+    justify-self: center;
+}
+[class*="col-"]{
+    text-align: center;
+    margin-top: 20px;
+}
+input{
+    text-align: center;
+}
+[id*="btn-"]{
+    height: auto;
+    width:200px;
+    font-size: 15px;
+    border: none;
+    background-color: #804000;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding-top: 5px;
+    position: relative;
+  }
+
+[id*="btn-"] .badge {
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: blue;
+    color: white;
+}
+/*[id*="btn-"]:hover{
+    border: 2px solid #ffcc00;
+    background-color: #ffcc00;
+    color: black;
+}*/
+[id*="btn-"] >p, [id*="btn-"] > span{
+    font-size: 15px;
+}
+
+/*Responsive:*/
+@media only screen and (min-width: 800px) {
+    body{
+        /*background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,0.7318277652858018) 0%, rgba(148,187,233,0.4853291658460259) 100%);*/
+        background-image: url(dd.png);
+        background-size:auto;
+        background-repeat: repeat-y;
+        background-position: left;
+        
+    }
+    .container{
+        grid-template-areas: 
+        "instructions instructions update buttons"
+        "instructions instructions image buttons"
+        "instructions instructions scorebox buttons";
+        column-gap: 15px;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .row-0{ grid-area: instructions;}
+    .row-1{grid-area: image;}
+    .row-11{grid-area: update;}
+    .row-2{
+        grid-area: scorebox;
+        display: flex;
+        justify-content: center;
+    }
+    .row-3{
+        grid-area: buttons;
+        display: flex;
+        flex-direction: column;
+    }
+    [class*="col-3"]{
+        padding-right: 20px;
+    }
+    [class*="row-"]{
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .instrbox{
+        max-width: 300px;
+        height: 600px;
+    }
+}
+
+/* BACKGROUND */
+/* body {
+    /* background-color: lightblue; */
+    /*background-image: linear-gradient(to left,pink,orange);
+  } */
+
+  body {
+    background-image: url(https://i.gifer.com/9E93.gif);
+    /*background-image: url(./images/cookies2.gif);*/
+    /* background-size: cover; */
+    background-attachment: fixed;
+    background-position: center 100%;
+    background-size: contain;
+       
+  }
+
+  
+
+/* floating cookies */
+#floating-cookies {
+    visibility: visible;
+    position: relative;
+    height: 65%;
+}
+
+.float-cookie {
+    visibility: visible;
+    position: absolute;
+    width: 30%;
+    animation: fall 5s linear infinite;
+}
+
+.float-cookie-1 {
+    top: 200px;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.float-cookie-2 {
+    top: 100px;
+    right: 3%;
+}
+
+.float-cookie-3 {
+    top: 70px;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.float-cookie-4 {
+    top: 200px;
+    right: 5%;
+    animation-delay: 1s;
+}
+
+.float-cookie-5 {
+    top: 400px;
+    left: 12%;
+    animation-delay: 3s;
+}
+
+.float-cookie-6 {
+    top: 300px;
+    right: 10px;
+    animation-delay: 2s;
+}
+
+.float-cookie-7 {
+    top: 25px;
+    left: 10%;
+    animation-delay: 4s;
+}
+
+.float-cookie-8 {
+    top: 40px;
+    right: 16%;
+    animation-delay: 3s;
+}
+
+.float-cookie-9 {
+    top: 300px;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.float-cookie-10 {
+    top: 350px;
+    right: 13%;
+    animation-delay: 1s;
+}
+
+.float-cookie-11 {
+    top: 410px;
+    right: 5%;
+    animation-delay: 3s;  
+}
+
+@keyframes fall{
+    0% {
+        opacity: 0;
+        top: 50%;
+        transform: translateY(-10px) rotate(30deg);
+        transform: translateX(-5%) rotate(0deg);
+    }
+    40% {
+        opacity: 0.9;
+        transform: translateY(40px) rotate(20deg);
+        transform: translateX(-10%) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10px) rotate(30deg);
+        transform: translateX(-5%) rotate(225deg);
+    }
+}
+
+/*MODAL*/           
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(238, 15, 15, 0.324); /* Fallback color */
+    background-color: rgba(83, 6, 6, 0.4); /* Black w/ opacity */
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #804000;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 2em;
+  }
+
+  /* The Instruction Button */
+  .instructionz {
+    color: white;
+    background: #d6893f;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .instructionz:hover, .instructionz:focus {
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+  /* The Play Button */
+  .play {
+    color: white;
+    background: #d6893f;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .play:hover, .play:focus {
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+ 
+

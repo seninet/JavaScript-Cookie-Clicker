@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookie Clicker</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!--MODAL TT-->
+    <div id="welcome" class="modal">
+        <div class="modal-content">
+            <p>WELCOME TO THE COOKIE CLICKER GAME !</p>
+            <button id="play" class="play">PLAY</button>
+        </div>
+    </div>
+ 
+
+    <div class="container">
+        <div class="row-0">
+            <!-- audio button -->
+        <audio src="audio.mp3" id="myAudio"></audio>
+        <button onClick="playMyAudio()">Play Audio</button>
+        <button onClick="pauseMyAudio()">Pause Audio</button>
+        <p id="audioStatus">Click The Play Button</p> 
+
+            <!-- instructions-->
+
+            <div class="instrbox">
+                <h3>Instructions:</h3>
+                <p class="instructions">
+                    Everytime you click on the cookie you will get 1 point. I you want to increase your score faster you can use some of your points (displayed in score box) to buy improvements (multiplier, bonus or autoclicker).
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Multiplier:</b> will multiply each click by the number displayed in the button. The first time you buy it will be multiplied by 3. Then the price will increase and so will the multiplier.
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Auto-clicker: </b>will allow you to increase your score without you clicking. It starts at 1clic/second, then 2 ...
+                </p>
+                <p class="instructions">
+                    <b style="font-size: 18px"> Bonus: </b>will allow you to increase your score by 200% everytime you click on the cookie during 30seconds.
+                </p>
+            </div>
+            
+        </div>
+        <div class="row-11">
+     
+
+            <!--Update -->
+            <div>
+                <p id="currentpersecondcookies"></p>
+            </div>
+        </div>
+        <div class="row-1">
+
+            <!-- floating cookies -->
+            <section id="sec-cookie">
+                <article id="cookie">
+                    <!-- floating cookies-->
+                    <section id="floating-cookies">
+                        <div id="first">
+                        <img class="float-cookie float-cookie-1" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-2" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-3" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-4" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-5" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-6" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-7" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-8" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-9" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-10" alt="cookie-float" src="./images/floatingcookie.png">
+                        <img class="float-cookie float-cookie-11" alt="cookie-float" src="./images/floatingcookie.png">
+                    </section> 
+
+
+
+
+
+
+
+
+
+
+  
+            <!--image cookie -->
+        
+          
+            <button type="button" id="imagebtn" data-min="0">
+          <img id="image" src="./images/cookie-complete.png" />
+        </button>
+        </div>
+        <div class="row-2">
+
+ 
+
+            <!-- Score box-->
+ 
+            <div class="col-s-12 col-3">
+                <h3 class="score">Score:</h3>
+                <input type="text" name="scorebox" id="counter" value="0" min="0" />
+            </div>
+        </div>
+        <div class="row-3">
+
+      
+            <!--3 buttons -->
+
+            <h3>Buy improvements:</h3>
+<!-- floating cookies -->
+<section id="sec-cookie">
+    <article id="cookie">
+        <!-- floating cookies-->
+        <section id="floating-cookies">
+            <div id="first">
+            <img class="float-cookie float-cookie-1" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-2" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-3" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-4" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-5" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-6" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-7" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-8" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-9" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-10" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-11" alt="cookie-float" src="./images/floatingcookie.png">
+        </section> 
+
+
+
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-1" onclick="audio.play();buymultiplier()" data-min="10">
+            <span class="badge">Multiplier</span>
+            <span id="amountmultiplier"> your clicks x3</span>
+            <p id="costmultiplier">Price= 30 pts</p>
+            <p id="currentmultiplier">your current multiplier is x1</p>
+          </button>
+            </div>
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-2" onclick="audio.play();buymultiplier()" data-min="10">
+            <span class="badge">Bonus</span>
+            <p id="timer">0.30</p>
+            <p id="bonuscost">Price= 10 pts</p>
+          </button>
+            </div>
+
+ <!-- floating cookies -->
+ <section id="sec-cookie">
+    <article id="cookie">
+        <!-- floating cookies-->
+        <section id="floating-cookies">
+            <img class="float-cookie float-cookie-1" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-2" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-3" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-4" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-5" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-6" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-7" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-8" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-9" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-10" alt="cookie-float" src="./images/floatingcookie.png">
+            <img class="float-cookie float-cookie-11" alt="cookie-float" src="./images/floatingcookie.png">
+        </section> 
+
+            <div class="col-s-12 col-3">
+                <button type="button" id="btn-3" onclick="audio.play();buymultiplier()" data-min="10">
+            <span class="badge">Auto-clicker</span>
+            <p id="persecondcookies">1 point(s)/second</p>
+            <p id="costautoclick">Price= 20pts</p>
+          </button>
+            </div>
+        </div>
+    </div> 
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+
