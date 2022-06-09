@@ -1,5 +1,5 @@
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 20px;
 }
 
@@ -42,7 +42,6 @@ h3 {
     max-width: 600px;
     padding-left: 10px;
     padding-right: 10px;
-
 }
 
 b {
@@ -109,11 +108,13 @@ input {
     color: #804000;
 }
 
+
 /*[id*="btn-"]:hover{
     border: 2px solid #ffcc00;
     background-color: #ffcc00;
     color: black;
 }*/
+
 [id*="btn-"]>p,
 [id*="btn-"]>span {
     font-size: 15px;
@@ -121,29 +122,22 @@ input {
 
 
 /*Responsive:*/
-@media only screen and (min-width: 800px) {
 
+@media only screen and (min-width: 800px) {
     .container {
         display: grid;
         justify-content: center;
-        grid-template-areas:
-            "row1 row1 row1"
-            "colonne1 colonne2 colonne3"
-            "colonne1 colonne2 colonne3"
-            "colonne1 colonne2 colonne3";
+        grid-template-areas: "row1 row1 row1" "colonne1 colonne2 colonne3" "colonne1 colonne2 colonne3" "colonne1 colonne2 colonne3";
         column-gap: 15px;
         justify-content: space-around;
         margin-top: 20px;
     }
-
     .row-1 {
         grid-area: row1;
     }
-
     .colonne-1 {
         grid-area: colonne1;
     }
-
     .colonne-2 {
         grid-area: colonne2;
         border: 2px solid #804000;
@@ -151,7 +145,6 @@ input {
         padding-left: 10px;
         padding-right: 10px;
     }
-
     .colonne-3 {
         grid-area: colonne3;
         border: 2px solid #804000;
@@ -159,38 +152,34 @@ input {
         padding-left: 20px;
         padding-right: 15px;
     }
-
     .row-1 {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-
     [class*="col-3"] {
         padding-right: 20px;
     }
-
     [class*="row-"] {
         margin-top: 0px;
         padding-top: 0px;
     }
-
     .instrbox {
         max-width: 300px;
         height: 600px;
     }
-
     .colonne-2>div {
         margin-bottom: 50px;
     }
-
     [id*="btn-"] {
         margin-top: 20px;
         margin-bottom: 20px;
     }
 }
 
+
 /*MODAL*/
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -216,7 +205,9 @@ input {
     border-radius: 5px;
 }
 
+
 /* Modal Content */
+
 .modal-content {
     /* background-color: #deae7e ; */
     color: black;
@@ -225,21 +216,28 @@ input {
     margin-top: 2%;
     margin-bottom: 20px;
     padding: 20px;
-    /* border: 3px solid #804000 ; */
-    border-radius: 50px ;
-    width: 60%;
-    height: 70%;
-    font-size: 6rem;
+    border: 3px solid #804000;
+    border-radius: 50px;
+    width: 52%;
+    height: 60%;
+    font-size: 30px;
     position: absolute;
     z-index: -2;
-    background-image: url(https://i.gifer.com/9E93.gif);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    /*background-image: url(https://i.gifer.com/9E93.gif);*/
 }
 
+
 /* The Instruction Button */
+
 .instructionz {
     color: white;
     background: #d6893f;
-    font-size: 20px;
+    font-size: 40px;
     border: none;
     border-radius: 10px;
     padding: 5px;
@@ -254,23 +252,114 @@ input {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
+
 /* The Play Button */
+
 .play {
     color: white;
     background: #804000;
-    font-size: 24px;
-    border: 2px solid #d6893f;
+    font-size: 20px;
+    border: 2px solid #804000;
     border-radius: 30px;
     padding: 15px 40px;
     margin-top: 10px;
+    align-self: center;
 }
 
 .play:hover,
 .play:focus {
-    padding: 10px;
+    padding: 15px 45px;
     text-decoration: none;
     cursor: pointer;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    height: 100px;
+    background-color: #d6893f;
+    border: solid 2px black;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    z-index: 1;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .popup,
+    .popuptext {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* @media only screen and (min-width: 900) {
+    /* For mobile phones: */
+
+
+/* .popup,
+    .popuptext {
+        margin-left: 10px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    } */
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
