@@ -26,13 +26,13 @@ function gameFunction() {
     function update() {
         counterInput.value = counter;
         document.getElementById("costautoclick").innerHTML =
-            (autoClick + 1) * 150 + " pts";
+            "Cost: " + (autoClick + 1) * 150 + " pts";
         document.getElementById("persecondcookies").innerHTML =
             autoClick + 1 + " point(s)/second";
         document.getElementById("amountmultiplier").innerHTML =
             " your clicks" + " x" + (multiplier + 2);
         document.getElementById("costmultiplier").innerHTML =
-            multiplier * 100 + " pts";
+            "Cost: " + multiplier * 100 + " pts";
     }
     // alret box function
     function alertBox() {
@@ -180,7 +180,8 @@ function gameFunction() {
     let scoree = 0;
 
     function displayBonus() {
-        document.getElementById("bonuscost").innerHTML = bonusCost + " pts";
+        document.getElementById("bonuscost").innerHTML =
+            "Cost: " + bonusCost + " pts";
     }
 
     function displayBonusTime() {
