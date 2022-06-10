@@ -37,7 +37,8 @@ To create a **cookie clicker** as a team by following the linked [Instructions](
 - Bhama[](https://github.com/BhamaGuruswami)
 - Senait[](https://github.com/seninet)
 
-
+#### Live Demo of our project
+  - [Live Demo](https://seninet.github.io/JavaScript-Cookie-Clicker/web.html)
 #### License
 
 This project is under license from MIT. For more details, see the [License](
